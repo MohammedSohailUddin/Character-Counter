@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+	<title>Letter Counter</title>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			font-family: 'Merriweather', serif;
+			background: #ff8b65;
+		}
+		div .header h1{
+			color: #b30000;
+			padding-top: 60px;
+			text-align: center;
+			margin: 0 auto;
+			font-size: 6rem;
+			font-weight: bold;
+		}
+		div textarea{
+			font-family: 'Merriweather', serif;
+			background: #dad6d5;
+			color: #000;
+			font-weight: bold;
+			font-size: 1.5rem;
+			height: 10rem;
+			width: 40rem;
+			margin-left: 22rem;
+			margin-top: 3rem;
+		}
+		div .letter-count h1{
+			text-align: center;
+			font-size: 3rem;
+			margin: 0 auto;
+			margin-top: 2rem;
+		}
+		div .footer p{
+			font-family: 'roboto';
+			margin-left: 34.8rem;
+			margin-top: 5rem;
+			font-weight: bolder;
+			font-size: 20px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<h1>Letter Counter</h1>
+		</div>
+		<div>
+			<textarea id="textbox" onkeyup="charcountupdate(this.value)" placeholder="Start Typing Here..."></textarea>
+		</div>
+		<div class="letter-count">
+			<h1 >Live Count :<span id="count">  0</span></h1>
+		</div>
+		<div class="footer">
+			<p>&#169; <script> document.write(new Date().getFullYear())</script> Md Sohail uddin</p>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	function charcountupdate(str) {
+	var length = str.length;
+	document.getElementById("count").innerHTML = length ;
+}
+</script>
+</body>
+</html>
